@@ -1,0 +1,27 @@
+{
+  "name": "ha-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Redwood-HR-FEC/ha-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Redwood-HR-FEC/ha-proxy/issues"
+  },
+  "homepage": "https://github.com/Redwood-HR-FEC/ha-proxy#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.0",
+    "nodeman": "^1.1.2"
+  },
+  "devDependencies": {}
+}
