@@ -51,7 +51,7 @@ app.all('/rev-service/*', (req, resp) => {
     apiProxy.web(req, resp, {target: ServerThree});
 });
   
-app.all('/api/*', (req, resp) => {
+app.all('/review-api/*', (req, resp) => {
 console.log('Proxy to Review server API');
 apiProxy.web(req, resp, {target: ServerThree});
 });

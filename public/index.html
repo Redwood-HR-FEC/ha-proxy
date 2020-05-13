@@ -3,14 +3,43 @@
     <head>
         <meta charset="utf-8">
         <title>Amazon</title>
+        <link rel="stylesheet" href="./styles/styles.css">
     </head>
     <body>
         <div class="nav-bar">
             <img src="./images/nav.png" alt="nav">
         </div>
-        <div id="root"></div>
+        <div class="descriptions">
+            <div class="item-image">
+                <img src="./images/item-image.png" alt="item-image">
+            </div>
+            <div id="root"></div>
+            <div class="checkout">
+                <img src="./images/checkout.png" alt="checkout">
+            </div>
+        </div>
+        <div class="carousel">
+            <img src="./images/sponsor.png" alt="sponsor-products">
+            <img src="./images/similar.png" alt="similar-products">
+        </div>
+        <div>
+            <img src="./images/description.png" alt="product-description">
+        </div>
         <div id="app"></div>
-        <div id="review-service"></div>
+        <div>
+            <img src="./images/line.png" alt="line-break">
+        </div>
+        <div class="reviews">
+            <div>
+                <img src="./images/customer-reviews.png" alt="customer-reviews">
+            </div>
+            <div class="reviews-section">
+                <div>
+                    <img src="./images/customer-images.png" alt="customer-images">
+                </div>
+                <div id="review-service"></div>
+            </div>
+        </div>
 
         <script src="/dec-service/bundle.js"></script>
         <script src="/qna-service/bundle.js"></script>
@@ -18,6 +47,6 @@
 
         <script src="/description/bundle.js"></script>
         <script src="/questions/bundle.js"></script>
-        <script src="/reviews/bundle.js"></script>
+        <script src="/review-api/bundle.js"></script>
     </body>
 </html>
