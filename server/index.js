@@ -1,3 +1,4 @@
+const compression = require('compression');
 const express = require('express');
 const cors = require('cors');
 // const proxy = require('express-http-proxy');
@@ -5,12 +6,14 @@ const cors = require('cors');
 const httpProxy = require('http-proxy');
 const apiProxy = httpProxy.createProxyServer();
 const app = express();
+
 const PORT = 3000;
 
-const serverOne = 'http://localhost:3001',
-    ServerTwo = 'http://localhost:3002',
-    ServerThree = 'http://localhost:3003';
+const serverOne = 'http://54.218.33.175:3001',
+    ServerTwo = 'http://54.218.33.175:3001',
+    ServerThree = 'http://18.236.82.217:3003';
 
+app.use(compression());
 app.use('/:id', express.static('public'));
 app.use(express.json());
 app.use(cors())
