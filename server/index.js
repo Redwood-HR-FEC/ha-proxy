@@ -9,14 +9,19 @@ const app = express();
 
 const PORT = 3000;
 
-const serverOne = 'http://54.218.33.175:3001',
-    ServerTwo = 'http://54.218.33.175:3001',
-    ServerThree = 'http://18.236.82.217:3003';
+const serverOne = 'http://54.184.20.122:3001',
+    ServerTwo = 'http://34.212.75.246:3002',
+    ServerThree = 'http://44.228.132.116:3003';
 
 app.use(compression());
 app.use('/:id', express.static('public'));
 app.use(express.json());
 app.use(cors())
+
+// error
+apiProxy.on('error', (req, res) => {
+    res.statusCode(500).send('error');
+});
 
 // Description Proxy 
 
@@ -39,7 +44,7 @@ app.all('/getsingleproduct/*', (req, resp) => {
 
 app.all('/qna-service/*', (req, resp) => {
     console.log('Proxy to Q and A server');
-    apiProxy.web(req, resp, {target: ServerTwo});
+    apiProxy.web(req, resp, {target: serverOne});
 });
   
 app.all('/questions/*', (req, resp) => {
